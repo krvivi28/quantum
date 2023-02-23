@@ -40,7 +40,7 @@ const Apply = () => {
     // const data = await res.json();
     if (res.status === 200) {
       window.alert(
-        `Hello, ${user.name}! Congrats have registered successfully!`
+        `Hello, ${user.name}! Congrats have you registered successfully!`
       );
       navigate("/users");
     } else {

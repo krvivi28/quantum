@@ -7,6 +7,7 @@ const router = express.Router();
 const User = require("../model/user");
 router.get("/allusers", async (req, res) => {
   try {
+    console.log("all user page");
     const data = await User.find({});
     res.status(200).send(data);
   } catch (error) {
@@ -38,8 +39,8 @@ router.post("/login", async (req, res) => {
   try {
     const data = await User.findOne({ email: email });
     const token = await data.genAuthToken();
-    res.cookie("jwt", token, {
-      expires: new Date(Date.now() + 300000000),
+    res.cookie("jwtoken", token, {
+      expires: new Date(Date.now() + 300000),
       httpOnly: true,
       // secure:true
     });

@@ -20,15 +20,15 @@ const Create = () => {
         credentials: "include",
       });
       // const res = await axios.get("/api/allusers");
-      if (res.status === 200) {
-        const jdata = await res.json();
-        setData(jdata);
+      const jdata = await res.json();
+      setData(jdata);
+      if (!res.status === 200) {
+        window.alert(res.error);
       } else {
-        window.alert("login to access all users");
-        navigate("/login");
       }
     } catch (error) {
       console.log(error);
+      navigate("/");
     }
   };
 

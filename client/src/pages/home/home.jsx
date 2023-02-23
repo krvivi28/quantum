@@ -37,7 +37,7 @@ function Home() {
       window.alert(`login successfull!`);
       navigate("/users");
     } else {
-      window.alert("some error occured");
+      window.alert("invalid credentials");
     }
   };
   return (
