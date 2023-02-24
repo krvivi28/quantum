@@ -22,9 +22,8 @@ const Create = () => {
       // const res = await axios.get("/api/allusers");
       const jdata = await res.json();
       setData(jdata);
-      if (!res.status === 200) {
+      if (res.status === 400) {
         window.alert(res.error);
-      } else {
       }
     } catch (error) {
       console.log(error);

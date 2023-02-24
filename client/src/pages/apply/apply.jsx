@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import Form from "react-bootstrap/Form";
-import icon from "../../common/assets/images/ent.png";
+import icon from "../../common/assets/images/login1.png";
 import "./apply.css";
 import Button2 from "@mui/material/Button";
 import { useNavigate } from "react-router-dom";
