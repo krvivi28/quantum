@@ -44,7 +44,7 @@ const Apply = () => {
       );
       navigate("/users");
     } else {
-      window.alert("some error occured");
+      window.alert("invalid details");
     }
   };
 
