@@ -25,7 +25,7 @@
     /* border-top: 4px solid green; */
     border-radius: 10px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(49, 133, 78, 1) 1.9%, rgba(43, 40, 40, 1) 100.2%);
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgb(12 12 11) 1.9%, rgba(43, 40, 40, 1) 100.2%);
 
 }
 

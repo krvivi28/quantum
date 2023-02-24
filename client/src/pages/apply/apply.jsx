@@ -54,7 +54,7 @@ const Apply = () => {
         <div className="container main2">
           <div className="top1">
             <h1 className="text-white">SIGN UP</h1>
-            <div className="img">
+            <div className="img imgbox">
               <img src={icon} alt="" />
             </div>
           </div>
