@@ -2,9 +2,9 @@ const jwt = require("jsonwebtoken");
 const User = require("../model/user");
 const auth = async (req, res, next) => {
   try {
-    console.log("auth me hu mai");
+    // console.log("auth me hu mai");
     const token = req.cookies.jwtoken;
-    console.log(token);
+    // console.log(token);
     const verifyUser = jwt.verify(token, process.env.SECRET_KEY);
     console.log(verifyUser);
     const user = await User.findOne({

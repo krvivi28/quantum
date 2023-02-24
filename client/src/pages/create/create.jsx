@@ -3,7 +3,12 @@ import Tabledark from "../../common/components/table/table";
 import { useState } from "react";
 import Table from "react-bootstrap/Table";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
+import Alert from "react-bootstrap/Alert";
+import Button from "react-bootstrap/Button";
+import { Link } from "react-router-dom";
 const Create = () => {
+  const [show, setShow] = useState(false);
   const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
@@ -11,23 +16,15 @@ const Create = () => {
   }, []);
   const allusers = async () => {
     try {
-      const res = await fetch("/api/allusers", {
-        method: "GET",
-        headers: {
-          Accept: "application/json",
-          "Content-Type": "application/json",
-        },
-        credentials: "include",
+      const res = await axios.get("/api/allusers", {
+        withCredentials: true,
       });
-      // const res = await axios.get("/api/allusers");
-      const jdata = await res.json();
-      setData(jdata);
-      if (res.status === 400) {
-        window.alert(res.error);
+      setData(res.data);
+      if (res.status !== 200) {
+        // window.alert("please login to access all users details");
       }
     } catch (error) {
-      console.log(error);
-      navigate("/");
+      setShow(true);
     }
   };
 
@@ -35,6 +32,13 @@ const Create = () => {
 
   return (
     <>
+      <Alert show={show} variant="danger">
+        <Alert.Heading>Authentication required</Alert.Heading>
+        <p>You need to be logged in to access all users details</p>
+        <Link to="/">
+          <button className="btn btn-sm btn-outline-danger">Login</button>
+        </Link>
+      </Alert>
       <div className="container my-5">
         <h1 className={"text-success"}>Applicants</h1>
 

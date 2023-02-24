@@ -6,6 +6,10 @@ const app = require("./app");
 require("./db/db");
 app.use(express.static(path.join(__dirname, "client", "build")));
 app.get("/", (req, res) => {
+  // console.log("Cookies: ", req.cookies);
+
+  // Cookies that have been signed
+  // console.log("Signed Cookies: ", req.signedCookies);
   res.sendFile(path.join(__dirname, "client", "build", "index.html"));
 });
 app.listen(process.env.PORT, () => {

@@ -5,7 +5,7 @@ const jwt = require("jsonwebtoken");
 const { registerUser } = require("../controllers/registerController");
 const router = express.Router();
 const User = require("../model/user");
-router.get("/allusers", async (req, res) => {
+router.get("/allusers", auth, async (req, res) => {
   try {
     console.log("all user page");
     const data = await User.find({});
