@@ -1,13 +1,11 @@
 import React from "react";
-// import Table from "react-bootstrap/Table";
-import Button from "react-bootstrap/Button";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 
 const Tabledark = (props) => {
-  const navigate = useNavigate();
-  const gosch = () => {
-    navigate(`/schedule/${props.id}`);
-  };
+  // const navigate = useNavigate();
+  // const gosch = () => {
+  //   navigate(`/schedule/${props.id}`);
+  // };
   return (
     <tr>
       <td>{props.ind}</td>
@@ -17,14 +15,11 @@ const Tabledark = (props) => {
       <td>{props.created}</td>
 
       <td>
-        <Button onClick={gosch} variant="danger" size="sm">
-          Delete
-        </Button>{" "}
+        <i className="text-primary mx-2 bi bi-pencil-square"></i>
+        <i className="text-danger mx-2 bi bi-x-circle-fill"></i>
       </td>
       <td>
-        <Button variant="success" size="sm">
-          Active
-        </Button>{" "}
+        <i className="text-success bi bi-circle-fill"></i> Active
       </td>
     </tr>
   );

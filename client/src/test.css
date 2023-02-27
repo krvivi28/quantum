@@ -1,0 +1,128 @@
+.maincon {
+    width: 100%;
+    height: 92.5vh;
+    background-image: linear-gradient(to right top, #007784, #007784, #007784, #007784, #007784);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.box {
+    height: 80%;
+    margin: auto;
+    width: 25%;
+    background-color: #1d2c4f;
+    border-radius: 10px;
+    /* padding: 5px; */
+    overflow: hidden;
+
+}
+
+.box1 {
+    height: 35%;
+
+}
+
+.box2 {
+    height: 65%;
+}
+
+.login {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 160px;
+    height: 30%;
+    background-color: #00f5e1;
+    top: 0px;
+    /* margin-top: -15px; */
+}
+
+.imgbox {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+.imgbox img {
+    width: 150px;
+
+    /* border: 2px solid white; */
+    /* border-radius: 73px; */
+}
+
+.input {
+    margin-top: 80px;
+}
+
+.links {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.linkc {
+    color: #00f5e1;
+}
+
+.lbtn {
+    margin-top: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+#head {
+    margin-top: -20px;
+}
+
+.btnl {
+    background-color: #00f5e1;
+    color: black;
+}
+
+.btn:hover {
+    background-color: green;
+    color: white;
+}
+
+.btn2 {
+    cursor: none !important;
+}
+
+.input input {
+    outline: none;
+    background-color: #4d5974;
+    color: white;
+}
+
+/* input[type=text]:focus {
+    border: 3px solid #555;
+} */
+.input input:focus {
+    outline: none;
+    background-color: #4d5974;
+    color: white;
+}
+
+.input input::placeholder {
+    color: white;
+}
+
+.input-group-text {
+    background-color: #4d5974;
+}
+
+.input-group-text i {
+    color: white;
+}
+
+@media only screen and (max-width: 600px) {
+    .box {
+        width: 90%;
+        margin-top: 35px;
+    }
+}

@@ -2,14 +2,13 @@ import React, { useEffect } from "react";
 import Tabledark from "../../common/components/table/table";
 import { useState } from "react";
 import Table from "react-bootstrap/Table";
-import { useNavigate } from "react-router-dom";
+// import { useNavigate } from "react-router-dom";
 import axios from "axios";
 import Alert from "react-bootstrap/Alert";
-import Button from "react-bootstrap/Button";
 import { Link } from "react-router-dom";
 const Create = () => {
   const [show, setShow] = useState(false);
-  const navigate = useNavigate();
+  // const navigate = useNavigate();
   const [data, setData] = useState([]);
   useEffect(() => {
     allusers();
@@ -34,7 +33,7 @@ const Create = () => {
     <>
       <Alert show={show} variant="danger">
         <Alert.Heading>Authentication required</Alert.Heading>
-        <p>You need to be logged in to access all users details</p>
+        <p>Login to access all users details</p>
         <Link to="/">
           <button className="btn btn-sm btn-outline-danger">Login</button>
         </Link>
@@ -42,7 +41,7 @@ const Create = () => {
       <div className="container my-5">
         <h1 className={"text-success"}>Applicants</h1>
 
-        <Table responsive="sm" striped bordered hover variant="dark">
+        <Table responsive="sm" striped bordered hover variant="">
           <thead>
             <tr>
               <th>#</th>

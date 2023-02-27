@@ -7,7 +7,7 @@ const router = express.Router();
 const User = require("../model/user");
 router.get("/allusers", auth, async (req, res) => {
   try {
-    console.log("all user page");
+    // console.log("all user page");
     const data = await User.find({});
     res.status(200).send(data);
   } catch (error) {
@@ -17,7 +17,7 @@ router.get("/allusers", auth, async (req, res) => {
 
 router.post("/register", async (req, res) => {
   const { name, email, dob, password, cpassword } = req.body;
-  console.log(req.body);
+  // console.log(req.body);
   try {
     const data = new User({
       name,

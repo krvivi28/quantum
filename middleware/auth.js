@@ -10,7 +10,7 @@ const auth = async (req, res, next) => {
     const user = await User.findOne({
       _id: verifyUser._id,
     });
-    console.log(user);
+    // console.log(user);
     req.token = token;
     req.user = user;
     req.userId = user._id;
